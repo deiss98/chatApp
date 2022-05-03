@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>chat</class>
+ <widget class="QDialog" name="chat">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>948</width>
+    <height>691</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#chat{
+	border-radius:60px;
+	background-color: rgb(51, 51, 51);
+}
+
+</string>
+  </property>
+  <widget class="QGroupBox" name="groupBoxInvitation">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>10</y>
+     <width>891</width>
+     <height>261</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#groupBoxInvitation{
+	color: rgb(255, 255, 255);
+font: 75 18pt &quot;Arial&quot;;
+}</string>
+   </property>
+   <property name="title">
+    <string>Invitations</string>
+   </property>
+   <widget class="QFrame" name="frameConnexion">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>110</y>
+      <width>381</width>
+      <height>120</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(51, 51, 51);
+border-radius: 15px;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="6" column="0">
+      <widget class="QLineEdit" name="lineEditEnvoyerInvitation">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: transparent;
+color: rgb(255, 255, 255);
+font: 14pt &quot;Arial&quot;;
+border: none;
+border-bottom: 1px solid #717072;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="placeholderText">
+        <string>Veuillez saisir l'identifiant du correspondant</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="labelEnvoyerInvitation">
+       <property name="styleSheet">
+        <string notr="true">font: 14pt &quot;Arial&quot;;
+color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>Envoyer une invitation de discussion</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0">
+      <widget class="QPushButton" name="pushButtonEnvoyerInv">
+       <property name="styleSheet">
+        <string notr="true">font: 16pt &quot;Roboto&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(26, 82, 118);
+border-radius: 60px;
+</string>
+       </property>
+       <property name="text">
+        <string>Envoyer</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="labelInvitationAttente">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>70</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#labelInvitationAttente{
+	color: rgb(255, 255, 255);
+font: 12pt &quot;Arial&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>Invitations en attente</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBoxListeInvitation">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>120</y>
+      <width>301</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelIdConnesion">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>30</y>
+      <width>171</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 12pt &quot;Arial&quot;;
+color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Votre ID de connexion:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonAccepter">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>200</y>
+      <width>131</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 16pt &quot;Roboto&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(26, 82, 118);
+border-radius: 60px;
+</string>
+    </property>
+    <property name="text">
+     <string>Accepter</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonRefuserInvitation">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>200</y>
+      <width>161</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 16pt &quot;Roboto&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(170, 0, 0);
+border-radius: 60px;
+</string>
+    </property>
+    <property name="text">
+     <string>Refuser</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelIdUtilisateur">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>30</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+font: 75 14pt &quot;Verdana&quot;;
+border-radius:61px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <zorder>frameConnexion</zorder>
+   <zorder>labelInvitationAttente</zorder>
+   <zorder>comboBoxListeInvitation</zorder>
+   <zorder>labelIdConnesion</zorder>
+   <zorder>pushButtonAccepter</zorder>
+   <zorder>pushButtonRefuserInvitation</zorder>
+   <zorder>labelIdUtilisateur</zorder>
+   <zorder>groupBoxMessage</zorder>
+  </widget>
+  <widget class="QGroupBox" name="groupBoxMessage">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>280</y>
+     <width>891</width>
+     <height>381</height>
+    </rect>
+   </property>
+   <property name="accessibleName">
+    <string> Messagerie</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#groupBoxMessage{
+	color: rgb(255, 255, 255);
+font: 75 18pt &quot;Arial&quot;;
+}</string>
+   </property>
+   <property name="title">
+    <string>Correspondants &amp;&amp;  messages</string>
+   </property>
+   <widget class="QComboBox" name="comboBoxCorrespondantAmis">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>40</y>
+      <width>281</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelChoixCorrespondant">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>411</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#labelChoixCorrespondant{
+	color: rgb(255, 255, 255);
+font: 11pt &quot;Arial&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>Choisissez un corespondant(Ami.e) pour afficher son message</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="listWidgetChat">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>701</width>
+      <height>192</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 0, 0);</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditSendMessage">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>290</y>
+      <width>501</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 0, 0);
+font: 14pt &quot;Arial&quot;;</string>
+    </property>
+    <property name="placeholderText">
+     <string>Saisisez votre message ici</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonEnvoyerMessage">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>290</y>
+      <width>171</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 16pt &quot;Roboto&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(26, 82, 118);
+border-radius: 60px;
+</string>
+    </property>
+    <property name="text">
+     <string>Envoyer</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
